@@ -1,0 +1,77 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+entries:
+- title: Sidebar
+  levels: two
+  folders:
+  - title: Документация
+    output: web
+    folderitems:
+    - title: Введение
+      url: /introduction.html
+      output: web
+    - title: Быстрый старт
+      url: /quick-start.html
+      output: web
+    - title: Dispatcher
+      url: /dispatcher.html
+      output: web
+    - title:   Scenario
+      url: /scenario.html
+      output: web
+    - title:   Session
+      url: /session.html
+      output: web
+    - title:   Command
+      url: /command.html
+      output: web
+    - title:   Update
+      url: /update.html
+      output: web
+    - title:   Конфигурация
+      url: /configuration.html
+      output: web
+  - title: Примеры использования
+    output: web
+    folderitems:
+    - title: Message
+      url: /message.html
+      output: web
+    - title: Inline Command
+      url: /inline-command.html
+      output: web
+    - title: Reply Command
+      url: /reply-command.html
+      output: web
+    - title: Quick button
+      url: /quick-button.html
+      output: web
+    - title: Form
+      url: /form.html
+      output: web
+    - title: Error
+      url: /error.html
+      output: web
+  - title: Формы
+    output: web
+    folderitems:
+    - title: 1.0
+      url: /Form.1.0.html
+      output: web
+  - title: Релизы
+    output: web
+    folderitems:
+    - title: 1.0.0
+      url: /1.0.0.html
+      output: web
+  - title: Информация
+    output: web
+    folderitems:
+    - title: Лицензия
+      url: /licence.html
+      output: web
+    - title: Внести вклад
+      url: /contribution.html
+      output: web
+    - title: Поддержка
+      url: /support.html
+      output: web

@@ -1,0 +1,90 @@
+import static org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "1.3.50"
+    id "org.jetbrains.kotlin.plugin.spring" version "1.3.50"
+    id("org.springframework.boot") version "2.1.8.RELEASE" apply false
+    id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id "maven-publish"
+    id "com.dorongold.task-tree" version "1.4"
+    id "io.gitlab.arturbosch.detekt" version "1.0.1"
+}
+
+group = 'kz.btsd.bot'
+ext.moduleName = 'kz.btsd.bot.scenario.sdk'
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+        freeCompilerArgs = ["-Xjsr305=strict"]
+    }
+}
+
+compileJava {
+    inputs.property("moduleName", moduleName)
+    doFirst {
+        options.compilerArgs = [
+                '--module-path', classpath.asPath,
+        ]
+        classpath = files()
+    }
+}
+
+compileKotlin.destinationDir = compileJava.destinationDir
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom BOM_COORDINATES
+    }
+}
+
+detekt {
+    config = files("./bot-detekt-config.yml")
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+
+    implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion")
+
+    compile("kz.btsd.bot:bot-sdk:$botSdkVersion")
+    implementation("org.springframework.boot:spring-boot-autoconfigure")
+    implementation("org.springframework:spring-web")
+    implementation("javax.annotation:javax.annotation-api:$javaxAnnotationApiVersion")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+    implementation("io.github.microutils:kotlin-logging:$kotlinLoggingVersion")
+    testImplementation "org.springframework.boot:spring-boot-starter-test"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'org.jetbrains.kotlin') {
+            details.useVersion kotlinVersion
+        }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = group
+            version = version
+            from components.java
+        }
+    }
+}
+

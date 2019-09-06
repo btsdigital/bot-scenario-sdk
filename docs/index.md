@@ -1,3 +1,12 @@
+---
+title: "bot-scenario-sdk"
+keywords: bot messenger sdk
+tags:
+sidebar: 
+permalink: index.html
+summary:
+---
+
 # bot-scenario-sdk
 
 Проект предназначен для упрощения разработки [сервисов](TODO!#сервис) приложения [Мессенджер](TODO#Мессенджер)
