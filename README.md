@@ -49,6 +49,9 @@
         gradle bootRun
      ```
  
+## Что дальше
+Полная информация о возможностях библиотеки содержится в [документации](https://btsdigital.github.io/bot-scenario-sdk)
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
