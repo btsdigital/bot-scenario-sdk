@@ -68,7 +68,6 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:$okHttpVersion")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion")
-
     compile("kz.btsd:bot-sdk:$botSdkVersion")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework:spring-web")
