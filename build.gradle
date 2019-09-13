@@ -69,7 +69,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
     implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion")
 
-    compile("kz.btsd.bot:bot-sdk:$botSdkVersion")
+    compile("kz.btsd:bot-sdk:$botSdkVersion")
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework:spring-web")
     implementation("javax.annotation:javax.annotation-api:$javaxAnnotationApiVersion")
