@@ -1,0 +1,32 @@
+travis encrypt OSSRH_JIRA_PASSWORD="A8FCCE88"language: java
+
+sudo: false
+os:
+  - osx
+jdk:
+  - openjdk11
+
+env:
+  global:
+    # OSSRH_JIRA_USERNAME
+    - secure: "Th1EB6qWDIT78NnLpTJGporrvmYFS6ajEJ96ues+dClFqK7UwwXze4CSqfT2iNFTCYiy7P63xLKnNKFE+DSmDzPEPbsGwvyLodT2ELQGmL1oEuyXuVDId5euXfYc/hRvcKy8vW6ABwrg9XA4uenFy4XPP2B5nuBAC/nzdABqz5tQcG+WbwJPA9VrUVz0Cm7TbrvZA1zdQzhaOZC7GdmSvkN6pEdDalZwS4jAtqLmmvkVOcPS57K2t4zxRv7gJnrH8mBTbwSfIBohlok1rmdO5Wu074ITKBz+MF3OIutnFJXKazf3djySA6hZeQAKxgJD67yXngkHHYOh14J3a9qlSLKGHEDQmbcYguNk8rwkxvb1pGAnlop0cZyKahuVlrDyCaJoc5HBYPje3/tJZ2pCcQFY7IAr1cGq+nz2OaJDdJPvXptd1iybZ9Uv6OTuRLaUlCzP2oa0aU5POFJFRIPcFGBCMAL98+XM+gnjh/cT+zitlL+OwFDx6+JcDhj6L5pDlF10vQjVT2YA5NArdSdWN7l8vVfYgoH8Zq+0FK0UDQfsNsw2PdI3yjpAY7aKWGkLKtPjwoyLCf1QBs+gdLCaJuWRh76fj/q/+bWJy7wCf+L829VAUpT/93Ob77q1vDIWS8Qo1QCZz6xop4hFUAbPQauBCsWyBpmk9ohgHplA4yU="
+    # OSSRH_JIRA_PASSWORD
+    - secure: "jpbm+QyV/76x+K3kyEsTWTxfPHbmZFadN2BqETYctvXpQ9gRL/4hmlXXoupyD+W5xw+O4z9NzGcgIUJV0Khg+KBT65hc/fuBbaAIrEKFhb/Ah01z4JNqJ7v1aIDil+zaawxva5b9V7o9YKbovBTJ5s/I1nsnn8OdlTCcdWdyXZ/vOa8zw/FdmfKvjk8W9aU3oOxzmlbkE6nuNcNX75MTKVj7Bf0pyf1fWlh+wgxJNEb11c0W2lD65WTcVz2Aq9//Jetq/WGp4v/tF7bBS6FkrJS/zb5VOhG37IlY2HXEqAyEeb45d+oD6eQvPXFsVbTyDNZ54j0d0C6uX8bbHd7sJlJLvM+bncZX/V4SZh9le3DasgoQqfMI7hzTg5rLSPJspFzh2Idw9IGcGB4WO/9cxbJpEDsPG5oaBAbHFw6Z0C+C7b9Pvg9bFxJOo27JaHfIvZmyFs+DuAYVdK9MomqkPLep58b+BZDRXLUhEL6/zpmBgCc6qM4AEGjQ0/1yYDZMpyWFIVwqw0C50RVCuH76fD5sCx9SPgWNonmn99Pohmqi2mqggg1Ipee4YRj/ltGsbieYtzw2LYr/3vQBmX904f506aHQGP+B5ovskWJ/VD3y+NTMcylVUhnZkOXL9ownE5Hyw4yVOPH2KoTokh+MnUQgFwyHir3W6nDrchv+L7A="
+    # GPG_KEY_NAME
+    - secure: "YLmsjTDlRNo2zfTLv8jXSrnJQfeRcGHZTHsFXcqvKDm81WYHpSO4rmk2/UYMJg+sK0D5QEmZJ6pXIGbxC9XghIaG4qqFA97cElJTDrIzSeXcN/6cH4nO83veApte/FZT7ivrIlM40EeAuKPaxJJHJ0gPzFc3SunUeMpqfVbDM96igtW4pKgD1kO9Vc613fV+FWSbGO1/cu3WwKbMwvF5EOQ3e+hVMUcO6450s3Kuy6KJoQzd0JZAgAKe6D8LSAMWxqwKpDRklvZhawZzzLK6RqAy6QvMuJV4isJwWO2JcHBLbyVYja1YNe/aFUDP5A02Y0j01NYXSQvDNX81VuOpwMB5/MCxmmH4YPNMzX5UPFx26N54w1pUqttvmNy6AbiA5BJiceocwhN8oIRf87AyG5WZlN4z10OMXhkPPh80M9JtrCWY+/GSVS15TiqfLQXtHyqlmX77Q+Fk/X6QVSmVU1pfcjlu3Hx4zCcyJ3tzC5GRchWJiMn4zXrMB7HPo9hAhdbhlCaS73et2qWekbi7elyv50/10WEvPhD0gQa/VWC088ye1+0FJ1k1HIfSaHaiGL5IWvzdafESKBUeYnbBYUGlsI3+53GCnhHFfa6jzQ6YYwfB4EdO2s9a/fJoaI+7cLuTNYKVuld5nJFBiCzt/bTYimKNmRHKZmt57bBh4OE="
+    # GPG_PASSPHRASE
+    - secure: "uZl1hXz4f0dNv8wG4hJXtLG0QQde9SGzh20U5KndkvgCvqDqbD8gpXRpYzJYKh5n7Inx7oQhG5c1CuS7IYNdgXqGZAj50nIM6oYwz6FwNWTjNTnHMAhCgZ4HZG9RpZpd/h9QSEJXpC/gTyt5FKfijgOwDqm0FTplgwUGxyx+FcmE0jPm174Zq1NnmgHhazWPr0p9ku/luyDb/RPPXuCnV1Y+52I4xZ5D94vdz4yG/islE75dZB1SC9GJ173AFU7yC+KTzJVTELJwict4FtPwf6iU/fR1cTS4psUARnsgPYPbjOv2gftLkwQQPUvLDnvcN2X520i8MdkJYm9Y63YJtIGJGHrozgRWmR0rjNXW4npOL21BaWi3wAPws+kBngcvJwSYu36Aimp1/v6brqb+1KJ6P27iRhx4iUeEs9myqb3dC3MqG5azfB6wbrNshc9l4+XJCZxNZZxzm0yOCtw8zy8my07aqYXPsvohQukIBJasj9+MoM0EWvDbAVqlTiqrCoA7jyZqAqlCCwZHRPC6Z5ZV3EULopAqr2nIgb5ks5Z1/YJfzRbaO+bsjtQzQ/hvJHUEfoHAp0FM+bPzZH3hpOK+02m5oW/me5+DB01eBjEndIcvcbCC/GM4Ro5y20tHXvqubFHay89dsbyI8C1O/BTYdoHrBgjWwwcACvrjBiM="
+stages:
+  - name: deploy
+    if: branch = master
+
+after_success:
+  - >-
+    test $TRAVIS_BRANCH = "master" &&
+    ./cd/before-deploy.sh &&
+    ./gradlew --version &&
+    ./gradlew --info publish
+    -PjiraUsername=$OSSRH_JIRA_USERNAME
+    -PjiraPass=$OSSRH_JIRA_PASSWORD
+    -Psigning.keyId=$GPG_KEY_NAME
+    -Psigning.password=$GPG_PASSPHRASE
