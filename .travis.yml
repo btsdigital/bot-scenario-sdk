@@ -1,4 +1,4 @@
-travis encrypt OSSRH_JIRA_PASSWORD="A8FCCE88"language: java
+language: java
 
 sudo: false
 os:
