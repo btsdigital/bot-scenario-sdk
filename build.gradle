@@ -108,7 +108,7 @@ if (project.hasProperty("jiraUsername") && project.hasProperty("jiraPass")) {
 
                 pom {
 
-                    description = 'bot sdk for AITU messenger bots'
+                    description = 'bot scenario sdk for AITU messenger bots'
                     name = 'AITU bots Bot scenario sdk'
                     url = repo
                     licenses {
